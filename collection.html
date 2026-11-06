@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>设计系列 · Louis Verde</title>
+<meta name="description" content="Louis Verde 六大品类、38 款设计概念：手镯、珠串、吊坠、雕件、戒指、耳饰。">
+<meta name="theme-color" content="#F5F0E7">
+<meta property="og:title" content="设计系列 · Louis Verde">
+<meta property="og:description" content="Louis Verde 六大品类、38 款设计概念：手镯、珠串、吊坠、雕件、戒指、耳饰。">
+<meta property="og:image" content="assets/img/W01.webp">
+<link rel="icon" href="assets/logo/monogram.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif+SC:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="collection">
+<header id="site-header"></header>
+<main class="section" style="padding-top:56px">
+  <div class="wrap">
+    <p class="eyebrow">The collection</p>
+    <h1 style="font-size:clamp(32px,4vw,52px)">设计系列</h1>
+    <p class="lead" style="margin-top:16px">六种形态，38 款设计概念。点亮右上角的心形，告诉我们你最想要哪一款。</p>
+    <div class="filters" role="toolbar" aria-label="按品类筛选">
+      <button class="chip" data-filter="all">全部</button>
+      <button class="chip" data-filter="bangles">手镯</button>
+      <button class="chip" data-filter="beads">珠串</button>
+      <button class="chip" data-filter="pendants">吊坠</button>
+      <button class="chip" data-filter="carvings">雕件</button>
+      <button class="chip" data-filter="rings">戒指</button>
+      <button class="chip" data-filter="earrings">耳饰</button>
+      <button class="chip" data-filter="studio">原创系列</button>
+      <button class="chip" data-filter="wish">♡ 我想要的</button>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="notice" style="margin-top:56px">以上均为设计概念图，用来展示造型和比例方向，不是商品实拍。实物颜色和纹理每件不同，正式上架时附实物照片和检测资料。</p>
+  </div>
+</main>
+<section class="section dark notify" id="notify">
+  <div class="wrap reveal">
+    <p class="eyebrow">First pieces</p>
+    <h2>第一批作品上架时，告诉你</h2>
+    <p class="lead">我们正在挑选第一批实物。留下邮箱，上新时第一时间通知你；也可以勾选你最感兴趣的品类。</p>
+    <form class="form" id="notify-form" novalidate>
+      <label class="sr" for="email" style="position:absolute;left:-9999px">邮箱</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="你的邮箱" required>
+      <button class="btn" type="submit">通知我</button>
+    </form>
+    <div class="interests" role="group" aria-label="感兴趣的品类">
+      <label><input type="checkbox" name="interest" value="手镯">手镯</label>
+      <label><input type="checkbox" name="interest" value="珠串">珠串</label>
+      <label><input type="checkbox" name="interest" value="吊坠">吊坠</label>
+      <label><input type="checkbox" name="interest" value="雕件">雕件</label>
+      <label><input type="checkbox" name="interest" value="戒指">戒指</label>
+      <label><input type="checkbox" name="interest" value="耳饰">耳饰</label>
+      <label><input type="checkbox" name="interest" value="礼物">想送礼</label>
+    </div>
+    <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
+<footer id="site-footer"></footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/designs.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

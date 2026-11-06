@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>设计详情 · Louis Verde</title>
+<meta name="description" content="Louis Verde 设计概念详情。">
+<meta name="theme-color" content="#F5F0E7">
+<meta property="og:title" content="设计详情 · Louis Verde">
+<meta property="og:description" content="Louis Verde 设计概念详情。">
+<meta property="og:image" content="assets/img/W01.webp">
+<link rel="icon" href="assets/logo/monogram.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+SC:wght@300;400&family=Noto+Serif+SC:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body data-page="design">
+<header id="site-header"></header>
+<main>
+  <div class="wrap" id="detail"></div>
+  <section class="section" style="padding-top:0">
+    <div class="wrap">
+      <h2 style="font-size:26px;margin-bottom:32px">同系列的其他设计</h2>
+      <div class="grid" id="more"></div>
+    </div>
+  </section>
+</main>
+<section class="section dark notify" id="notify">
+  <div class="wrap reveal">
+    <p class="eyebrow">First pieces</p>
+    <h2>第一批作品上架时，告诉你</h2>
+    <p class="lead">我们正在挑选第一批实物。留下邮箱，上新时第一时间通知你；也可以勾选你最感兴趣的品类。</p>
+    <form class="form" id="notify-form" novalidate>
+      <label class="sr" for="email" style="position:absolute;left:-9999px">邮箱</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="你的邮箱" required>
+      <button class="btn" type="submit">通知我</button>
+    </form>
+    <div class="interests" role="group" aria-label="感兴趣的品类">
+      <label><input type="checkbox" name="interest" value="手镯">手镯</label>
+      <label><input type="checkbox" name="interest" value="珠串">珠串</label>
+      <label><input type="checkbox" name="interest" value="吊坠">吊坠</label>
+      <label><input type="checkbox" name="interest" value="雕件">雕件</label>
+      <label><input type="checkbox" name="interest" value="戒指">戒指</label>
+      <label><input type="checkbox" name="interest" value="耳饰">耳饰</label>
+      <label><input type="checkbox" name="interest" value="礼物">想送礼</label>
+    </div>
+    <p class="form-msg" id="form-msg" role="status" aria-live="polite"></p>
+  </div>
+</section>
+<footer id="site-footer"></footer>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/designs.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

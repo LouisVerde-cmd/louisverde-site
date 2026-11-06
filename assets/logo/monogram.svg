@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="120 84 192 192">
+<title>Louis Verde Classic Monogram - manual vector review candidate V0.3</title>
+<desc>Manual L/V curves in selected source coordinates; source-traced wordmark. REVIEW_REQUIRED. Limited-resolution source, not production released.</desc>
+<path id="L" fill="#0B3028" fill-rule="evenodd" d="M 126 90 H 202 V 92 C 184 92 177 99 177 113 V 222 C 177 238 182 244 198 246 H 225 V 249 H 126 V 247 C 143 246 148 240 148 226 V 113 C 148 98 142 94 126 92 Z"/>
+<path id="V" fill="#B89A62" fill-rule="evenodd" d="M 178 132 H 221 V 134 C 208 134 206 140 211 153 L 245 235 L 277 153 C 282 141 279 136 267 134 V 132 H 306 V 134 C 294 134 289 142 284 154 L 243 270 H 241 L 190 153 C 185 140 183 135 178 134 Z"/>
+</svg>
