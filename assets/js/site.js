@@ -47,10 +47,27 @@
       return v;
     } catch (e) { return 'anon'; }
   }
+  // 来源标记：从 ?src=tiktok 这类链接第一次进站时记下来，之后的投票和登记都带上
+  function source() {
+    try {
+      var s = localStorage.getItem('lv-src');
+      var m = /[?&](?:src|utm_source)=([A-Za-z0-9_-]{1,20})/.exec(location.search);
+      if (m && !s) { s = m[1].toLowerCase(); localStorage.setItem('lv-src', s); }
+      return s || '';
+    } catch (e) { return ''; }
+  }
+  // 从哪个网站点过来的（只记域名，站内跳转不记）
+  function refHost() {
+    try {
+      var h = document.referrer ? new URL(document.referrer).hostname : '';
+      return h === location.hostname ? '' : h;
+    } catch (e) { return ''; }
+  }
   function send(data) {
     if (!CONFIG.formEndpoint) return Promise.resolve(null);
     data.visitor = visitorId();
     data.page = location.pathname;
+    data.src = source();
     // 用 text/plain 发送，避免 Google 脚本不支持的跨域预检
     return fetch(CONFIG.formEndpoint, {
       method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -264,4 +281,16 @@
     document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { io ? io.observe(el) : el.classList.add('in'); });
   }
   observe();
+
+  // ---------- 访问记录：每个页面每次打开记一条（同一次浏览里刷新不重复记） ----------
+  source();
+  try {
+    var pvKey = 'lv-pv:' + location.pathname + location.search;
+    if (!sessionStorage.getItem(pvKey)) {
+      sessionStorage.setItem(pvKey, '1');
+      var item = /[?&]id=([A-Za-z0-9_-]{1,20})/.exec(location.search);
+      var pv = send({ type: 'visit', item: item ? item[1] : '', ref: refHost() });
+      if (pv && pv.catch) pv.catch(function () { /* 记不上不影响浏览 */ });
+    }
+  } catch (e) { /* 隐私模式下忽略 */ }
 })();
