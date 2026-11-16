@@ -189,7 +189,7 @@
           '<dl class="facts">' +
             '<div><dt>品类</dt><dd>' + esc(d.catZh) + '</dd></div>' +
             '<div><dt>尺寸设想</dt><dd>' + esc(d.size) + '</dd></div>' +
-            '<div><dt>材质</dt><dd>白绿色系天然石材。每件实物颜色和纹理各不相同，正式上架时附实物照片和检测资料。</dd></div>' +
+            '<div><dt>材质</dt><dd>非洲翠。这一页展示的是设计概念；对应单件的实物照片和检测资料，确认后再列出。</dd></div>' +
             '<div><dt>状态</dt><dd>设计中，暂未开售</dd></div>' +
           '</dl>' +
           '<div class="actions">' +
