@@ -1,8 +1,9 @@
 // 官网设置：上线前只需要改这里。
 window.LV_CONFIG = {
   // 数据接收地址：Google 表格脚本部署后给的网址（以 https://script.google.com/macros/s/ 开头）。
-  // 留空 = 演示模式：“想要”和上新通知都不会真的发送。做法见 官网/上线指南.md
-  formEndpoint: '',
+  // 留空 = 演示模式：“想要”、首发名单和访问记录都不会真的发送。
+  // 2026-11-16 已接上表格「Louis Verde 官网数据」（gongxifacai1311 账号下）。
+  formEndpoint: 'https://script.google.com/macros/s/AKfycbzCLi9jDEHjXa-y9F_QE77EixNWcsPhlMWrneIYCCryXO3Ku0YvPrXqu8AStZ6TTY3u/exec',
 
   // 社媒主页链接。留空的不会显示。
   social: {
