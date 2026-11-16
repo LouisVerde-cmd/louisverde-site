@@ -66,9 +66,12 @@ h3 { font-size: 20px; line-height: 1.5; }
 .header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand svg { width: 40px; height: 40px; }
+/* 定稿字标（2026-11-16）：用矢量文件做遮罩，颜色跟随背景色设置；文字留给读屏软件 */
 .wordmark {
-  font-family: var(--serif-en); font-weight: 500; font-size: 18px; letter-spacing: .34em;
-  color: var(--forest); padding-left: .34em;
+  display: block; width: 156px; height: 13.6px; overflow: hidden; white-space: nowrap; text-indent: -999px;
+  background: var(--forest);
+  -webkit-mask: url(../logo/wordmark.svg) center / contain no-repeat;
+  mask: url(../logo/wordmark.svg) center / contain no-repeat;
 }
 .nav { display: flex; gap: clamp(20px, 3vw, 40px); align-items: center; font-size: 14px; letter-spacing: .14em; }
 .nav a { position: relative; padding: 6px 0; color: var(--forest); }
@@ -94,7 +97,7 @@ h3 { font-size: 20px; line-height: 1.5; }
   body.menu-open .nav { transform: none; opacity: 1; pointer-events: auto; }
   body.menu-open .menu-btn span:first-child { transform: translateY(3.5px) rotate(45deg); }
   body.menu-open .menu-btn span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
-  .wordmark { font-size: 15px; letter-spacing: .28em; }
+  .wordmark { width: 128px; height: 11.2px; }
   .brand svg { width: 34px; height: 34px; }
 }
 
@@ -228,7 +231,7 @@ h3 { font-size: 20px; line-height: 1.5; }
 .footer { background: #082520; color: rgba(245,240,231,.7); padding: 72px 0 36px; font-size: 14px; }
 .footer .top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; }
 .footer .brand svg { width: 44px; height: 44px; }
-.footer .wordmark { color: var(--ivory); }
+.footer .wordmark { background: var(--ivory); }
 .footer h4 { color: var(--gold-soft); font-weight: 400; letter-spacing: .2em; font-size: 13px; margin: 0 0 16px; }
 .footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .footer a:hover { color: var(--ivory); }
